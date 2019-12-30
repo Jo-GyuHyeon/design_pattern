@@ -84,3 +84,72 @@
         //    private Member() {
         //    }
         }
+# 싱글턴 패턴
+
+객체가 너무 많아지면 컴퓨터 자원을 과도하게 사용하게 되고, 이는 프로그램 전체의 속도를 느리게 할 수 있다.
+
+→ 개발자는 객체의 최대 개수를 제한할 필요가 생긴다.
+
+싱글턴 패턴 : 최대 N개로 객체 생성을 제한하는 패턴
+
+→ 여기서 중요한 것은 생성되는 객체의 최대 개수를 제한하는 데 있어 객체의 생성을 요청하는 쪽에서는 일일이 신경쓰지 않아도 되도록 만들어주는 것이다.
+
+## 사용 예
+
+일반 자바 프로그래밍
+
+- 데이터베이스 컨넥션 풀
+- 로그 라이터
+
+게임 프로그래밍
+
+- 사운드 매니저
+- 스코어 매니저
+
+### Test code
+
+      public class Database {
+          private static Database singleton;
+          private String name;
+      
+          public Database(String name) {
+              super();
+              this.name = name;
+          }
+      
+          public static Database getInstance(String name) {
+              if (singleton == null) {
+                  singleton = new Database(name);
+              }
+              return singleton;
+          }
+      
+          public String getName() {
+              return name;
+          }
+      }
+
+  ### Test code 사용 예시
+
+      public class TestPattern1 {
+      
+          public static void main(String[] args) {
+              Database database;
+              database = Database.getInstance("첫 번째");
+              System.out.println("database.getName() = " + database.getName());
+      
+              database = Database.getInstance("두 번째");
+              System.out.println("database.getName() = " + database.getName());
+      
+              Database d1 = new Database("1");
+              Database d2 = new Database("2");
+              Database d3 = new Database("3");
+              Database d4 = new Database("4");
+              Database d5 = new Database("5");
+              Database d6 = new Database("6");
+      
+              System.out.println("database use");
+          }
+      }
+
+- 
