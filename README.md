@@ -106,50 +106,175 @@
 - 사운드 매니저
 - 스코어 매니저
 
-### Test code
+## 객체 생성 개수 제한 하기
 
-      public class Database {
-          private static Database singleton;
-          private String name;
-      
-          public Database(String name) {
-              super();
-              this.name = name;
-          }
-      
-          public static Database getInstance(String name) {
-              if (singleton == null) {
-                  singleton = new Database(name);
-              }
-              return singleton;
-          }
-      
-          public String getName() {
-              return name;
-          }
-      }
+    public class Database {
+        private static Database singleton;
+        private String name;
+    
+        public Database(String name) {
+            super();
+            this.name = name;
+        }
+    
+        public static Database getInstance(String name) {
+            if (singleton == null) {
+                singleton = new Database(name);
+            }
+            return singleton;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    }
 
-  ### Test code 사용 예시
+### Test code 사용 예시
 
-      public class TestPattern1 {
-      
-          public static void main(String[] args) {
-              Database database;
-              database = Database.getInstance("첫 번째");
-              System.out.println("database.getName() = " + database.getName());
-      
-              database = Database.getInstance("두 번째");
-              System.out.println("database.getName() = " + database.getName());
-      
-              Database d1 = new Database("1");
-              Database d2 = new Database("2");
-              Database d3 = new Database("3");
-              Database d4 = new Database("4");
-              Database d5 = new Database("5");
-              Database d6 = new Database("6");
-      
-              System.out.println("database use");
-          }
-      }
+    public class TestPattern1 {
+    
+        public static void main(String[] args) {
+            Database database;
+            database = Database.getInstance("첫 번째");
+            System.out.println("database.getName() = " + database.getName());
+    
+            database = Database.getInstance("두 번째");
+            System.out.println("database.getName() = " + database.getName());
+    
+            Database d1 = new Database("1");
+            Database d2 = new Database("2");
+            Database d3 = new Database("3");
+            Database d4 = new Database("4");
+            Database d5 = new Database("5");
+            Database d6 = new Database("6");
+    
+            System.out.println("database use");
+        }
+    }
 
-- 
+## 생성자 문제점과 해결, 쓰레드 사용시 문제점 파악하기
+
+- 생성자를 priavte로 막아 둔다.
+- 생성을 하기 위해 생성 유틸리티 메서드를 사용한다.
+- 아래의 코드 중 생성자 메서드는 실제 DB 커넥션을 하는 것 처럼 효과를 주기 위함이다.
+
+
+    public class Database {
+        private static Database singleton;
+        private String name;
+    
+    //    public Database(String name) {
+    //        super();
+    //        this.name = name;
+    //    }
+        
+        private Database(String name) {
+            try {
+                Thread.sleep(100);
+                this.name = name;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    
+        public static Database getInstance(String name) {
+            if (singleton == null) {
+                singleton = new Database(name);
+            }
+            return singleton;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    }
+
+### Test code 사용 예시
+
+    public class TestPattern2 {
+    
+        static int nNUm = 0;
+    
+        public static void main(String[] args) {
+            Runnable task = () -> {
+                try {
+                    nNUm++;
+                    Database database = Database.getInstance(nNUm + "번째 Database");
+                    System.out.println("This is the " + database.getName());
+    
+                } catch (Exception e) {
+                    e.getStackTrace();
+                }
+            };
+    
+            for (int i = 0; i < 10; i++) {
+                Thread t = new Thread(task);
+                t.start();
+            }
+        }
+    }
+
+- for 문으로 생성된 객체는 거의 동시에 실행한 효과와 같다. 그렇기 때문에 sigleton 객체는 null로 인식하여 전부 인스턴스를 생성한다.
+- 생성 순서는 랜덤으로 메모리에 로드되는 순서대로 생성된다.
+- 이 처럼 싱글턴은 스레드에 취약점을 가지고 있다.
+
+## 쓰레드 사용시 문제점 해결 1
+
+- synchronized 예약어를 사용하여 동기화 처리
+- Database 클래스 중 getInstance() 코드 예시
+
+
+    public class Database {
+        private static Database singleton;
+        private String name;
+    
+        private Database(String name) {
+            try {
+                Thread.sleep(100);
+                this.name = name;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    
+        public synchronized static Database getInstance(String name) {
+            if (singleton == null) {
+                singleton = new Database(name);
+            }
+            return singleton;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    }
+
+- 단점: synchronized 는 비용이 비싸다.
+- 스레드를 한줄로 세워서 순서대로 처리 해야 되기 때문에 병목현상이 일어 한다.
+
+## 쓰레드 사용시 문제점 해결 2
+
+- Static 키워드는 프로그램이 실행되면 제일 먼저 메모리에 로드 된다는 특성을 가지고 있다.
+- Static 키워드의 특성을 잘 활용한다. - 생성자 생성 x  직접 생성 o
+
+
+    public class Database {
+        private static Database singleton = new Database("product");
+        private String name;
+        private Database(String name) {
+            try {
+                Thread.sleep(100);
+                this.name = name;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    
+        public static Database getInstance(String name) {
+             return singleton;
+        }
+    
+        public String getName() {
+            return name;
+        }
+    }

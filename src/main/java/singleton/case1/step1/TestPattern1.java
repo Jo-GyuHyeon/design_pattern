@@ -10,12 +10,12 @@ public class TestPattern1 {
         database = Database.getInstance("두 번째");
         System.out.println("database.getName() = " + database.getName());
 
-        Database d1 = new Database("1");
-        Database d2 = new Database("2");
-        Database d3 = new Database("3");
-        Database d4 = new Database("4");
-        Database d5 = new Database("5");
-        Database d6 = new Database("6");
+//        Database d1 = new Database("1");
+//        Database d2 = new Database("2");
+//        Database d3 = new Database("3");
+//        Database d4 = new Database("4");
+//        Database d5 = new Database("5");
+//        Database d6 = new Database("6");
 
         System.out.println("database use");
     }

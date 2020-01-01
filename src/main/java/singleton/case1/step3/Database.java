@@ -1,13 +1,8 @@
-package singleton.case1.step1;
+package singleton.case1.step3;
 
 public class Database {
-    private static Database singleton;
+    private static Database singleton = new Database("product");
     private String name;
-
-//    public Database(String name) {
-//        super();
-//        this.name = name;
-//    }
 
     private Database(String name) {
         try {
@@ -19,9 +14,6 @@ public class Database {
     }
 
     public static Database getInstance(String name) {
-        if (singleton == null) {
-            singleton = new Database(name);
-        }
         return singleton;
     }
 
