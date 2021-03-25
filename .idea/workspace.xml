@@ -1,31 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="32e829c8-98c4-4c9e-a711-bd17143f7a64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case1/APlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case1/APlayerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case1/BPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case1/BToAAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case1/TestPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case2/APlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case2/APlayerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case2/BPlayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adapter/case2/BPlayerImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/facade/case1/ComplexProduct.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/facade/case1/SimpleProductFacade.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/facade/case1/TestPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/spet1/MyClassA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/spet1/MyClassB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/spet1/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/spet1/PlayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/spet1/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/spet1/TestPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/step2/MyClassA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/step2/MyClassB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/step2/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/step2/PlayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/step2/Publisher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/observer/case2/step2/TestPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,19 +33,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="ProjectId" id="1VcBMjRYin15plgu3a48hHmMBg1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/adapter/case2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -88,7 +75,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/observer" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestPattern (5)">
+  <component name="RunManager" selected="Application.TestPattern (2)">
     <configuration name="TestPattern (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="observer.case2.TestPattern" />
       <module name="designpattern.main" />
@@ -102,12 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPattern (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="flyweight.case2.TestPattern" />
+    <configuration name="TestPattern (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="facade.case1.TestPattern" />
       <module name="designpattern.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="flyweight.case2.*" />
+          <option name="PATTERN" value="facade.case1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestPattern (2)" />
         <item itemvalue="Application.TestPattern (5)" />
         <item itemvalue="Application.TestPattern (4)" />
         <item itemvalue="Application.TestPattern (1)" />
         <item itemvalue="Application.TestPattern" />
-        <item itemvalue="Application.TestPattern (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -176,6 +163,7 @@
       </list>
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -197,109 +185,26 @@
       <workItem from="1581422056449" duration="1485000" />
       <workItem from="1581517605375" duration="2903000" />
       <workItem from="1581576855124" duration="97000" />
+      <workItem from="1583860779298" duration="7000" />
+      <workItem from="1611769101522" duration="401000" />
+      <workItem from="1615476735232" duration="598000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1531" y="295" key="#com.intellij.ide.util.MemberChooser" timestamp="1581572983686">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state x="-1029" y="83" key="#com.intellij.ide.util.MemberChooser/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1578215462917" />
-    <state x="-1029" y="83" key="#com.intellij.ide.util.MemberChooser/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1577891258538" />
-    <state x="-1029" y="83" key="#com.intellij.ide.util.MemberChooser/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1577891622258" />
-    <state x="1005" y="216" key="#com.intellij.ide.util.MemberChooser/0.23.1680.948@0.23.1680.948" timestamp="1581231914320" />
-    <state x="1531" y="295" key="#com.intellij.ide.util.MemberChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1581572983686" />
-    <state x="-1413" y="510" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1577945958495">
-      <screen x="-2560" y="-205" width="2560" height="1417" />
-    </state>
-    <state x="-1413" y="510" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1577945958495" />
-    <state width="1236" height="359" key="GridCell.Tab.0.bottom" timestamp="1581576424072">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1073" height="387" key="GridCell.Tab.0.bottom/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1578215850859" />
-    <state width="1073" height="347" key="GridCell.Tab.0.bottom/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921770" />
-    <state width="1073" height="347" key="GridCell.Tab.0.bottom/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844956" />
-    <state width="796" height="233" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1581232994189" />
-    <state width="1236" height="359" key="GridCell.Tab.0.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1581576424072" />
-    <state width="1236" height="359" key="GridCell.Tab.0.center" timestamp="1581576424071">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1073" height="387" key="GridCell.Tab.0.center/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1578215850858" />
-    <state width="1073" height="347" key="GridCell.Tab.0.center/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921769" />
-    <state width="1073" height="347" key="GridCell.Tab.0.center/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844956" />
-    <state width="796" height="233" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1581232994188" />
-    <state width="1236" height="359" key="GridCell.Tab.0.center/0.23.2560.1337@0.23.2560.1337" timestamp="1581576424071" />
-    <state width="1236" height="359" key="GridCell.Tab.0.left" timestamp="1581576424071">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1073" height="387" key="GridCell.Tab.0.left/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1578215850857" />
-    <state width="1073" height="347" key="GridCell.Tab.0.left/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921769" />
-    <state width="1073" height="347" key="GridCell.Tab.0.left/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844955" />
-    <state width="796" height="233" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1581232994187" />
-    <state width="1236" height="359" key="GridCell.Tab.0.left/0.23.2560.1337@0.23.2560.1337" timestamp="1581576424071" />
-    <state width="1236" height="359" key="GridCell.Tab.0.right" timestamp="1581576424071">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state width="1073" height="387" key="GridCell.Tab.0.right/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1578215850859" />
-    <state width="1073" height="347" key="GridCell.Tab.0.right/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921770" />
-    <state width="1073" height="347" key="GridCell.Tab.0.right/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844956" />
-    <state width="796" height="233" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1581232994188" />
-    <state width="1236" height="359" key="GridCell.Tab.0.right/0.23.2560.1337@0.23.2560.1337" timestamp="1581576424071" />
-    <state width="1073" height="347" key="GridCell.Tab.1.bottom" timestamp="1578252844957">
-      <screen x="-2560" y="-205" width="2560" height="1417" />
-    </state>
-    <state width="1073" height="347" key="GridCell.Tab.1.bottom/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921773" />
-    <state width="1073" height="347" key="GridCell.Tab.1.bottom/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844957" />
-    <state width="536" height="323" key="GridCell.Tab.1.bottom/0.23.2560.1337@0.23.2560.1337" timestamp="1577733197722" />
-    <state width="1073" height="347" key="GridCell.Tab.1.center" timestamp="1578252844957">
-      <screen x="-2560" y="-205" width="2560" height="1417" />
-    </state>
-    <state width="1073" height="347" key="GridCell.Tab.1.center/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921772" />
-    <state width="1073" height="347" key="GridCell.Tab.1.center/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844957" />
-    <state width="536" height="323" key="GridCell.Tab.1.center/0.23.2560.1337@0.23.2560.1337" timestamp="1577733197721" />
-    <state width="1073" height="347" key="GridCell.Tab.1.left" timestamp="1578252844956">
-      <screen x="-2560" y="-205" width="2560" height="1417" />
-    </state>
-    <state width="1073" height="347" key="GridCell.Tab.1.left/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921771" />
-    <state width="1073" height="347" key="GridCell.Tab.1.left/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844956" />
-    <state width="536" height="323" key="GridCell.Tab.1.left/0.23.2560.1337@0.23.2560.1337" timestamp="1577733197721" />
-    <state width="1073" height="347" key="GridCell.Tab.1.right" timestamp="1578252844957">
-      <screen x="-2560" y="-205" width="2560" height="1417" />
-    </state>
-    <state width="1073" height="347" key="GridCell.Tab.1.right/-2560.-205.2560.1417/0.23.1680.951@-2560.-205.2560.1417" timestamp="1578224921772" />
-    <state width="1073" height="347" key="GridCell.Tab.1.right/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578252844957" />
-    <state width="536" height="323" key="GridCell.Tab.1.right/0.23.2560.1337@0.23.2560.1337" timestamp="1577733197722" />
-    <state x="1569" y="486" key="VCS.ChangelistChooser" timestamp="1577717471062">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state x="1569" y="486" key="VCS.ChangelistChooser/0.23.2560.1337@0.23.2560.1337" timestamp="1577717471062" />
-    <state x="1008" y="433" key="com.intellij.ide.util.TipDialog" timestamp="1581585614150">
-      <screen x="0" y="23" width="2560" height="1337" />
-    </state>
-    <state x="662" y="314" key="com.intellij.ide.util.TipDialog/-2560.-205.2560.1417/0.23.1680.948@-2560.-205.2560.1417" timestamp="1578206300090" />
-    <state x="-1551" y="230" key="com.intellij.ide.util.TipDialog/-2560.-205.2560.1417/0.23.1680.953@-2560.-205.2560.1417" timestamp="1578303436866" />
-    <state x="662" y="314" key="com.intellij.ide.util.TipDialog/0.23.1680.948@0.23.1680.948" timestamp="1581229488942" />
-    <state x="1008" y="433" key="com.intellij.ide.util.TipDialog/0.23.2560.1337@0.23.2560.1337" timestamp="1581585614150" />
-    <state x="925" y="231" key="search.everywhere.popup" timestamp="1581230994890">
-      <screen x="0" y="23" width="1680" height="948" />
-    </state>
-    <state x="925" y="231" key="search.everywhere.popup/0.23.1680.948@0.23.1680.948" timestamp="1581230994890" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
